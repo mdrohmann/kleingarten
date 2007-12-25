@@ -1,0 +1,394 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>printDialog</class>
+ <widget class="QDialog" name="printDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>616</width>
+    <height>207</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy>
+    <hsizetype>1</hsizetype>
+    <vsizetype>1</vsizetype>
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>610</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Drucken/Vorschau...</string>
+  </property>
+  <property name="modal" >
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="layoutWidget1" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>581</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" >
+    <property name="margin" >
+     <number>0</number>
+    </property>
+    <property name="spacing" >
+     <number>6</number>
+    </property>
+    <item>
+     <spacer>
+      <property name="orientation" >
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" >
+       <size>
+        <width>120</width>
+        <height>31</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="previewButton" >
+      <property name="text" >
+       <string>Vorschau...</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="printButton" >
+      <property name="text" >
+       <string>Drucken...</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cancelButton" >
+      <property name="text" >
+       <string>Abbrechen</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2" >
+   <property name="geometry" >
+    <rect>
+     <x>400</x>
+     <y>20</y>
+     <width>201</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Druckbereich</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget2" >
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>181</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item row="1" column="3" >
+      <widget class="QSpinBox" name="toSpinBox" >
+       <property name="enabled" >
+        <bool>false</bool>
+       </property>
+       <property name="minimum" >
+        <number>1</number>
+       </property>
+       <property name="value" >
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" >
+      <widget class="QSpinBox" name="fromSpinBox" >
+       <property name="enabled" >
+        <bool>false</bool>
+       </property>
+       <property name="minimum" >
+        <number>1</number>
+       </property>
+       <property name="value" >
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" >
+      <widget class="QLabel" name="label" >
+       <property name="enabled" >
+        <bool>false</bool>
+       </property>
+       <property name="text" >
+        <string>bis</string>
+       </property>
+       <property name="buddy" >
+        <cstring>toSpinBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2" >
+      <widget class="QRadioButton" name="printSelection_allRadio" >
+       <property name="text" >
+        <string>Alles</string>
+       </property>
+       <property name="checked" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" >
+      <widget class="QRadioButton" name="printSelection_fromRadio" >
+       <property name="text" >
+        <string>Von</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="printTypeGroup" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>351</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Wähle Ausdruck</string>
+   </property>
+   <property name="checkable" >
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="layoutWidget3" >
+    <property name="geometry" >
+     <rect>
+      <x>11</x>
+      <y>21</y>
+      <width>331</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item row="1" column="1" >
+      <widget class="QComboBox" name="kategorienCombo" >
+       <property name="enabled" >
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>3</hsizetype>
+         <vsizetype>0</vsizetype>
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="editable" >
+        <bool>true</bool>
+       </property>
+       <property name="insertPolicy" >
+        <enum>QComboBox::NoInsert</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" >
+      <widget class="QComboBox" name="kontenCombo" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>3</hsizetype>
+         <vsizetype>0</vsizetype>
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="editable" >
+        <bool>true</bool>
+       </property>
+       <property name="insertPolicy" >
+        <enum>QComboBox::NoInsert</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" >
+      <widget class="QRadioButton" name="kategorienRadio" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>0</hsizetype>
+         <vsizetype>0</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string>Kategorien</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" >
+      <widget class="QRadioButton" name="kontenRadio" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>0</hsizetype>
+         <vsizetype>0</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string>Konten</string>
+       </property>
+       <property name="checked" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <tabstops>
+  <tabstop>kontenRadio</tabstop>
+  <tabstop>kontenCombo</tabstop>
+  <tabstop>kategorienRadio</tabstop>
+  <tabstop>kategorienCombo</tabstop>
+  <tabstop>printSelection_allRadio</tabstop>
+  <tabstop>printSelection_fromRadio</tabstop>
+  <tabstop>fromSpinBox</tabstop>
+  <tabstop>toSpinBox</tabstop>
+  <tabstop>previewButton</tabstop>
+  <tabstop>printButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>printDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>599</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>179</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kontenRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kontenCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>63</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>176</x>
+     <y>71</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kategorienRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kategorienCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>61</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>149</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>printSelection_fromRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>fromSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>424</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>484</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>printSelection_fromRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>toSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>442</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>564</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>printSelection_fromRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>437</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>519</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
