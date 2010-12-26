@@ -530,7 +530,7 @@ void PrintDialog::initMetrics()
     columnData.header.append( "Soll" );
     columnData.type.append(QVariant::Double);
     columnData.expandIndex = columnData.width.indexOf(0);
-    if (type == Konto) 
+    if (type == Konto)
     {
         columnData.header.append( "Saldo" );
         columnData.type.append(QVariant::Double);
@@ -603,10 +603,10 @@ QSqlQuery * PrintDialog::sqlStatement()
     sRec.append(QSqlField(tr("beleg")));
     sRec.append(QSqlField(tr("auszug")));
     sRec.append(QSqlField(tr("beschreibung")));
-    if (type == Konto) 
+    if (type == Konto)
     {
-        sRec.append(QSqlField(tr("haben")));
         sRec.append(QSqlField(tr("soll")));
+        sRec.append(QSqlField(tr("haben")));
     }
     else
     {
