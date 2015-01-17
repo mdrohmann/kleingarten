@@ -121,7 +121,7 @@ KleingartenModel::KleingartenModel(QObject * parent)
                     ORDER BY kontoname"
             );
     relQueries[1] = new QString(
-            "SELECT kategoriename, shortcut, season_hide \ 
+            "SELECT kategoriename, shortcut, season_hide \
                     FROM kategorien \
                     ORDER BY kategoriename"
             );
